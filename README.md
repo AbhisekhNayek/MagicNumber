@@ -6,7 +6,7 @@ A simple web application that performs the 1089 magic trick using HTML, CSS, and
 
 1. Open `index.html` in a web browser.
 2. Enter any three-digit number in the input field.
-3. Click the "Perform Magic" button.
+3. Click the "Go" button.
 4. See the magic happen!
 
 ## Customization

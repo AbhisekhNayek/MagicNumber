@@ -10,11 +10,10 @@
 body {
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:grid;/*Using grid display property to center the body's content*/
+    place-items: center;
     min-height: 100vh;
-    flex-direction: column;
+    line-height: 1.6remu;
 }
 
 .container {
@@ -33,11 +32,12 @@ body {
     font-weight: 600;
     letter-spacing: 1px;
     background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /* This property is used to clip out the bg to the text*/
     -webkit-text-fill-color: transparent;
-    animation: animate 1.5s linear infinite;
+    animation: animate 2s linear infinite;
 }
 
+/*Animation that causes the motion in the gradient*/
 @keyframes animate {
     100% {
         filter: hue-rotate(360deg);
@@ -52,8 +52,19 @@ label {
 }
 
 input {
-    padding: 8px;
-    font-size: 16px;
+    padding: 16px;
+    font-size: 22px;
+    color: white;
+    background-color: #0a0a0a;
+    border: 0;
+    width: 300px;
+    border-radius: 12px;
+    transition: all 1s ease;
+}
+
+/* Input is levitated when hovered*/
+input:hover {
+    transform: scale(1.01);
 }
 
 .btn {
@@ -68,10 +79,16 @@ input {
     font-size: 20px;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+/* Button hover effect*/
 #performBtn:hover {
-    color: rgb(0, 255, 0);
+    color: rgb(179, 255, 179);
+    border: none;
+    transform: scale(1.07);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1);
+    outline: 1px solid rgb(179, 255, 179);;
 }
 
 .steps {
@@ -81,6 +98,8 @@ input {
 
 .result {
     margin-top: 20px;
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 20px;
+    color: #d1d1d1;
 }
+
+/* Code Ends!*/
