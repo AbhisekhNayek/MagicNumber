@@ -30,8 +30,15 @@ function performMagic() {
 
         // Display the final result
         resultElement.innerHTML = `Result: ${finalResult}`;
+
+        // Changes the outline color of input to light green to indicate the user that their input was valid
+        inputElement.style.outline = '#a9ffa9 1px solid';
     } else {
         stepsElement.innerHTML = '';
+
+        // Changes the outline color of input to light red to indicate user that their input was invalid
+        inputElement.style.outline = '#ffa9a9 1px solid';
+
         resultElement.innerHTML = 'Please enter a valid three-digit number.';
     }
 }
